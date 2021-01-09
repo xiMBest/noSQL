@@ -1,7 +1,11 @@
 # 6 Lab
   1. Для 6 лабораторної роботи нам потрібно створити проект на Google Cloud Platform
+  ![redis](../screen/6_1.png)
   2. Створити Віртуальну машину для цієї машини прописати Firewall elasic на порті tcp:9200 та kibana tcp:5601
+  ![redis](../screen/6_2.png)
+  ![redis](../screen/6_2_1.png)
   3. Підключившись до машини через SSH прописуєм наступні команди
+  ![redis](../screen/6_3.png)
   встанновлення джави
 ```sh
 sudo apt-get install default-jre
@@ -47,8 +51,13 @@ sudo service kibana start
 sudo service kibana status
 ```
 4. Після усіх виконаних команд потрібно перейти по екстернал айпі http://104.198.172.153:5601 та http://104.198.172.153:9200 наприклад
+![redis](../screen/6_4.png)
 5. Тепер потрібно створити Logic app у Azure та створити connect у Logic app designer та заранити
+![redis](../screen/6_5.png)
+![redis](../screen/6_5_1.png)
+![redis](../screen/6_5_2.png)
 6. Після цього у індексах можна буде побачити дані
+![redis](../screen/6_6.png)
 
 
 
