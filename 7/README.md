@@ -4,7 +4,7 @@
 ![redis](../screen/7_1.png)
 ![redis](../screen/7_1_1.png)
 2. При створені візуалізації потрібно обрати індекс у який ми записали наші дані через Logic app у Azure
-
+![redis](../screen/7_2.png)
 3. У візуалізації потрібно додати бакети
 ![redis](../screen/7_3.png)
 ![redis](../screen/7_3_1.png)
