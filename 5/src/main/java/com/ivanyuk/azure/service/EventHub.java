@@ -1,4 +1,4 @@
-package com.lab5.resteventhub.service;
+package com.ivanyuk.azure.service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -21,7 +21,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
 @Service
-public class SendDataEventHubImpl implements SendDataService {
+public class EventHub implements InterfaceForSending {
 
     public void sendAndLog(String url) throws IOException, EventHubException {
         final ConnectionStringBuilder connStr = new ConnectionStringBuilder()
@@ -63,7 +63,7 @@ public class SendDataEventHubImpl implements SendDataService {
     public void showData(JSONArray jsonArray, Gson gson, EventHubClient ehClient) throws EventHubException {
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonObject = (JSONObject) jsonArray.get(i);
-            System.out.println("Document: " + i);
+            System.out.println("The information is recorded in Event Hub: " + i);
             byte[] payloadBytes = gson.toJson(jsonObject).getBytes(Charset.defaultCharset());
             EventData sendEvent = EventData.create(payloadBytes);
 

@@ -1,8 +1,8 @@
-package com.lab5.resteventhub.service;
+package com.ivanyuk.azure.service;
 
 import com.microsoft.azure.eventhubs.EventHubException;
 import java.io.IOException;
 
-public interface SendDataService {
+public interface InterfaceForSending {
     void sendAndLog(String url) throws IOException, EventHubException;
 }

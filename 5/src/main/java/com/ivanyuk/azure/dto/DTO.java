@@ -1,12 +1,12 @@
-package com.lab5.resteventhub.dto;
+package com.ivanyuk.azure.dto;
 
-public class RequestDTO {
+public class DTO {
 
     private String url;
 
     private String strategy;
 
-    public RequestDTO(String url, String strategy) {
+    public DTO(String url, String strategy) {
         this.url = url;
         this.strategy = strategy;
     }

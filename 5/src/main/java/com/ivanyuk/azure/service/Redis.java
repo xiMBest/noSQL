@@ -1,4 +1,4 @@
-package com.lab5.resteventhub.service;
+package com.ivanyuk.azure.service;
 
 import org.json.JSONArray;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.Map;
 
 @Service
-public class SendDataConsoleImpl implements SendDataService {
+public class Redis implements InterfaceForSending {
 
     private static final boolean USE_SSL = true;
     private static final int MAX_NUMBER = 1000;
