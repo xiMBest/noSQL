@@ -2,15 +2,13 @@ import org.apache.spark.eventhubs.{ ConnectionStringBuilder, EventHubsConf, Even
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
 
-// To connect to an Event Hub, EntityPath is required as part of the connection string.
-// Here, we assume that the connection string from the Azure portal does not have the EntityPath part.
-val appID = "ea07640e-c333-4be8-9bc3-d817f30d5fcb"
-val password = "r01iYou6G_O8GiU7II-E-4BOqp2-ei6VeX"
+val appID = "be4c1d34-ac5f-45bf-bd26-216f8a4273f8"
+val password = "FFo3uHZx5QxOFF4~~JJ9I4_zO5j.NM.2If"
 val tenantID = "7631cd62-5187-4e15-8b8e-ef653e366e7a"
-val fileSystemName = "naidacontainer"
-val storageAccountName = "naidaaccount"
-val connectionString = ConnectionStringBuilder("Endpoint=sb://naidaspace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=CLG2Pg719qKRTuFohSZF+kHagFUnxJeafNujjdWOj0k=")
-  .setEventHubName("naidavitalii")
+val fileSystemName = "naida9"
+val storageAccountName = "naida9"
+val connectionString = ConnectionStringBuilder("Endpoint=sb://naida9.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=XfUW/+PEO2s+RFOa4Dqg7rsktAQ8DTnsFTWeBd6WFb4=")
+  .setEventHubName("naida9")
   .build
 val eventHubsConf = EventHubsConf(connectionString)
   .setStartingPosition(EventPosition.fromEndOfStream)
@@ -29,8 +27,9 @@ val filtered = streamingInputDF.select (
      , get_json_object(col("body").cast(StringType), "$.parameter_code").alias("parameter_code")
 )
 
+
 filtered.writeStream
   .format("com.databricks.spark.csv")
   .outputMode("append")
-  .option("checkpointLocation", "/mnt/naidacontainer/labnaida8")
-  .start("/mnt/naidacontainer/labnaida8")
+  .option("checkpointLocation", "/mnt/naida9/lab9dir")
+  .start("/mnt/naida9/lab9dir")

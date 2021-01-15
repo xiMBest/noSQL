@@ -1,6 +1,6 @@
 {
   "event_hub": {
-    "conn_str": "Endpoint=sb://naidaspace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=CLG2Pg719qKRTuFohSZF+kHagFUnxJeafNujjdWOj0k=",
-    "eventhub_name": "naidavitalii"
+    "conn_str": "Endpoint=sb://naida9.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=XfUW/+PEO2s+RFOa4Dqg7rsktAQ8DTnsFTWeBd6WFb4=",
+    "eventhub_name": "naida9"
   }
 }
