@@ -24,6 +24,7 @@ GET _search {
 }
 }
 ```
+![redis](../screen/7_5.png)
  -також можна фільтрувати за допомогою таких команд як gte та lte це буде означати greater than or equal "value", or less than or equal "value" наприклад
   ```
     GET _search
@@ -44,6 +45,7 @@ GET _search {
     }
   }   
   ```
+  ![redis](../screen/7_5_1.png)
   
 6. Детальніше про усі HTTP ріквести можна почитати на різних форумах більш детально для прикладу
 https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html
